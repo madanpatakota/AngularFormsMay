@@ -1,9 +1,17 @@
 
 
-input.ng-untouched.ng-pristine.ng-invalid{
+input.ng-touched.ng-pristine.ng-invalid{
     border:1px red solid;
 }
 
-select.ng-untouched.ng-pristine.ng-invalid{
+input.ng-touched.ng-dirty.ng-invalid{
     border:1px red solid;
 }
+
+select.ng-touched.ng-pristine.ng-invalid{
+    border:1px red solid;
+}
+
+/* 
+touched untouched ngpristine ngvalid ng-invalid
+ng-dirty */
