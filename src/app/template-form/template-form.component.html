@@ -1,0 +1,46 @@
+<!-- we are discussing about the angular forms -->
+<!-- By using angular forms concept in angular we can handle the 
+validations -->
+<!-- getbootstrap website i am going to redesign my html form -->
+<!-- i need to trace the data in the controls -->
+
+<!-- How i can take the value
+where i can pick the value -->
+
+<div class="container">
+    <form (ngSubmit)="evtSubmit(form)" id="fUserForm" 
+    #form="ngForm" ngForm>
+        <!-- here ngForm taking all the values of the fUserForm -->
+        <div style="padding:20px" class="form-group row">
+            <label class="col-sm-2 col-form-label">UserName</label>
+            <div class="col-sm-10">
+                <input name="UName" type="text" class="form-control" 
+                 #UName = ngModel
+                 ngModel
+                 required/> 
+                 <small *ngIf="UName.invalid && UName.touched">Please enter the userName</small>
+
+                <!-- it will take the value of the control -->
+                <!-- its apply the some styles like internally 
+                i.e. touched or untouched or ngdirty or valid or invalid or pristine
+                 -->
+            </div>
+        </div>
+        <div style="padding:20px"  class="form-group row">
+            <label class="col-sm-2 col-form-label">User City</label>
+            <div class="col-sm-10">
+                <select class="form-control" name="UCity" #UCity="ngModel" ngModel required> 
+                    <!-- it will take the value of the control -->
+                    <option [value]="item.Id" 
+                    *ngFor="let item of CityList">
+                    {{item.Name}}
+                </option>
+                </select>
+                <small *ngIf="UCity.invalid && UCity.touched">Please enter the usercity</small>
+            </div>
+        </div>
+
+        <button [disabled]="form.invalid" class="btn btn-primary">Submit</button>
+
+    </form>
+</div>

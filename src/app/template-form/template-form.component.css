@@ -1,0 +1,9 @@
+
+
+input.ng-untouched.ng-pristine.ng-invalid{
+    border:1px red solid;
+}
+
+select.ng-untouched.ng-pristine.ng-invalid{
+    border:1px red solid;
+}

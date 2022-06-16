@@ -1,0 +1,42 @@
+
+
+object  is nothing but key value pair
+
+
+value = { UserName : "Clerk" , CityName : "Bangolore"};
+
+
+Array is nothing but multiple values
+[{ UserName : "Clerk" , CityName : "Bangolore"},
+{ UserName : "James" , CityName : "UK"}];
+
+
+For handliong the Angular form validations
+1. TemplateApproach   
+-> we are taking the form object from DOM
+
+2. ReactiveApproach   -> 
+we are creating the form object in typescript and sync into the DOM
+
+
+javascript represantaiton object
+
+now i am having the form object which contains the
+userName and UserCity form controls
+
+ value = {                           
+            UserName : "John",       // it sould be idetinfied the angular
+            UserCity : "Bangolore"   // it should be idetinfied the angular
+        }
+
+
+
+
+value = { UserName : "Clerk" , CityName : "Bangolore"};
+
+
+
+
+
+
+
