@@ -1,0 +1,72 @@
+<form [formGroup]="userForm">
+    <div formGroupName="emailsForm">
+        <div style="padding:20px" class="form-group row">
+            <label class="col-sm-2 col-form-label">
+                UserName</label>
+            <div class="col-sm-10">
+                <input id="userEmail" type="text" class="form-control" formControlName="userEmail" />
+
+                <!-- <small *ngIf="userForm.get('emailsForm')?.get('userEmail')?.touched 
+                   && userForm.get('emailsForm')?.get('userEmail')?.invalid">
+                    Please enter the email
+                </small> -->
+
+                <small *ngIf="userForm.get('emailsForm')?.get('userEmail')?.errors?.['required']
+                   && userForm.get('emailsForm')?.get('userEmail')?.touched">
+                    Please enter the email
+                </small>
+
+                <small *ngIf="userForm.get('emailsForm')?.get('userEmail')?.errors?.['email']
+                && userForm.get('emailsForm')?.get('userEmail')?.touched">
+                    Please enter the valid email
+                </small>
+
+                <small *ngIf="userForm.get('emailsForm')?.get('userEmail')?.errors?.['maxlength']
+                && userForm.get('emailsForm')?.get('userEmail')?.touched">
+                    Please do't enter the more than 15 charcters
+                </small>
+
+                <small *ngIf="userForm.get('emailsForm')?.get('userEmail')?.errors?.['myown']
+                && userForm.get('emailsForm')?.get('userEmail')?.touched">
+                    Please do't enter the more than 15 charcters
+                </small>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- touched untouched dirty pristine valid invalid -->
+
+    <!--<small>
+        Please enter the valid email
+    </small>
+    <small>
+        Please enter the valid email domain
+    </small>
+    <small>
+        Please do't enter the special charcters
+    </small>
+    <small>
+        Please do't enter the more than 20 charcters
+    </small> -->
+    <button (click)="evtClick()" class="btn btn-primary">Submit</button>
+
+
+
+    <!-- incase if user is not enter the valid email
+        pleae enter the valid email
+        
+        incase if user is not enter the any data
+        pleae enter the email
+
+        incase if user enter the not valid domain
+        please enter the valid domail
+
+
+        incase if user is enter the some special charcters
+        please do't enter the specail charcters
+
+
+        incase if user enter the the email more than 20 charcters
+        please do't enter enter the more than 20 charcters... -->
+</form>

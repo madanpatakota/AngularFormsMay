@@ -16,8 +16,8 @@ where i can pick the value -->
         <div style="padding:20px" class="form-group row">
             <label class="col-sm-2 col-form-label">UserName</label>
             <div class="col-sm-10">
-                <input id="UserNameID" name="UName" type="text" 
-                class="form-control" #UName=ngModel ngModel required />
+                <input id="UserNameID"  type="text" 
+                class="form-control" name="UName" #UName=ngModel ngModel required />
                 <small *ngIf="UName.invalid && UName.touched">
                     Please enter the userName</small>
 
